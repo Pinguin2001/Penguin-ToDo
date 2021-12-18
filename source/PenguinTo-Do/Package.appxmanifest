@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap mp rescap">
+  <Identity Name="Pinguin2001.ToDo.App" Publisher="CN=Pinguin2001" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="1b0152e3-29fe-417e-a08c-d713339d24fe" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Penguin To-Do</DisplayName>
+    <PublisherDisplayName>Pinguin2001</PublisherDisplayName>
+    <Logo>Assets\AppTiles\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PenguinTo_Do.App">
+      <uap:VisualElements DisplayName="Penguin To-Do" Square150x150Logo="Assets\AppTiles\Square150x150Logo.png" Square44x44Logo="Assets\AppTiles\Square44x44Logo.png" Description="Penguin To-Do" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\AppTiles\Wide310x150Logo.png" ShortName="To-Do" Square310x310Logo="Assets\AppTiles\LargeTile.png" Square71x71Logo="Assets\AppTiles\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\AppTiles\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+</Package>

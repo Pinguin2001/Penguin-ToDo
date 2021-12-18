@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="PenguinTo_Do.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Thickness x:Key="NavigationViewContentMargin">0,10,0,0</Thickness>
+    </Page.Resources>
+
+    <Grid x:Name="rootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="AppTitleBar" Visibility="Collapsed" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Assets/AppTiles/Square44x44Logo.png" 
+           Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"
+           Width="20" Height="20" Margin="12,7,0,0"/>
+            <TextBlock Text="Penguin To-Do" 
+               Grid.Column="1" 
+               Style="{StaticResource CaptionTextBlockStyle}" 
+               Margin="44,8,0,0"/>
+        </Grid>
+
+        <controls:NavigationView x:Name="NavView" Grid.Row="1" AlwaysShowHeader="False" IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact" ItemInvoked="NavView_ItemInvoked">
+            <controls:NavigationView.MenuItems>
+                <controls:NavigationViewItem Content="Home" Tag="Home" Icon="Home" />
+            </controls:NavigationView.MenuItems>
+            <Frame x:Name="contentFrame" />
+        </controls:NavigationView>
+    </Grid>
+</Page>
