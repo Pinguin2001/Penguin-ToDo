@@ -1,9 +1,9 @@
 // get required elements
 const inputBox = document.querySelector(".inputField input");
 const list = document.querySelector(".list");
+const input = document.getElementById("input");
 
 // add keyboard event listener
-var input = document.getElementById("input");
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
@@ -36,7 +36,7 @@ function loadTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<img class="icon" src="../Assets/images/done.png" height="22" width="22" onClick="deleteTask(${index})"</img></li>`;
+    newLiTag += `<li>${element}<img class="icon" src="../Assets/Images/done.png" height="22" width="22" onClick="deleteTask(${index})"</img></li>`;
   });
   list.innerHTML = newLiTag;
   inputBox.value = "";

@@ -16,7 +16,7 @@
                         <Button Click="ResetToDoList_Click" Content="Reset To-Do List"/>
                     </controls:Expander.Content>
                 </controls:Expander>
-                <controls:Expander IsExpanded="True" Header="Credits and Dependencies" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <controls:Expander Header="Credits and Dependencies" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                     <controls:Expander.Content>
                         <RichTextBlock>
                             <Paragraph>

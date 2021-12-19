@@ -22,13 +22,17 @@ namespace PenguinTo_Do
             {
                 TitleBarLoader();
             }
+            else
+            {
+                AppTitleBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                
+            }
             //Load Home Page
             contentFrame.Navigate(typeof(Pages.Home));
         }
 
         private void TitleBarLoader()
         {
-            AppTitleBar.Visibility = Windows.UI.Xaml.Visibility.Visible;
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
