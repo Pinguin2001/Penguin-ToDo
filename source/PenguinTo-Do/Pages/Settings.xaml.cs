@@ -8,7 +8,7 @@ namespace PenguinTo_Do.Pages
     {
         public Settings()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private async void ResetToDoList_Click(object sender, RoutedEventArgs e)

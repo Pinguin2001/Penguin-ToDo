@@ -36,7 +36,7 @@ function loadTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<img class="icon" src="../Assets/Images/done.png" height="22" width="22" onClick="deleteTask(${index})"</img></li>`;
+    newLiTag += `<li>${element}<img class="icon" src="ms-appx-web:///Assets/Images/done.png" height="22" width="22" onClick="deleteTask(${index})"</img></li>`;
   });
   list.innerHTML = newLiTag;
   inputBox.value = "";

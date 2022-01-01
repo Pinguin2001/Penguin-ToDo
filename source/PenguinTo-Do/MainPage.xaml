@@ -22,7 +22,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
-            <Image Source="Assets/AppTiles/Square44x44Logo.png" 
+            <Image Source="ms-appx:///Assets/AppTiles/Square44x44Logo.png" 
            Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"
            Width="20" Height="20" Margin="12,7,0,0"/>
             <TextBlock Text="Penguin To-Do" 

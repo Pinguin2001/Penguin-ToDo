@@ -8,7 +8,7 @@ namespace PenguinTo_Do.Pages
     {
         public Home()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             ToDoView.Navigate(new Uri("ms-appx-web:///Core/app.html"));
         }
 
@@ -23,7 +23,7 @@ namespace PenguinTo_Do.Pages
             ToDoView.Visibility = Visibility.Visible;
         }
 
-        public async void ThemeLoader()
+        private async void ThemeLoader()
         {
             // get System Theme Mode
             bool LightMode = Application.Current.RequestedTheme == ApplicationTheme.Light;

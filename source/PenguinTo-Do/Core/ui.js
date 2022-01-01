@@ -1,0 +1,1 @@
+﻿$(".main").append("<div class='inputField'><input id='input' type='text' placeholder='Add new task'><img class='addButton' onClick='addTask()' src='ms-appx-web:///Assets/Images/add.png' height='23' width='23' /></div><ul class='list'></ul>");

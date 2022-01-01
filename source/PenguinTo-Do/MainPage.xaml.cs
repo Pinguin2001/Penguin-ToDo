@@ -45,16 +45,14 @@ namespace PenguinTo_Do
         }
         private void NavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            if(args.IsSettingsInvoked)
+            if (args.IsSettingsInvoked)
             {
                 contentFrame.Navigate(typeof(Pages.Settings));
             }
             else
             {
                 object pageTag = args.InvokedItemContainer.Tag;
-                var pageName = $"PenguinTo_Do.Pages.{pageTag}";
-                var pageType = Type.GetType(pageName);
-                contentFrame.Navigate(pageType);
+                contentFrame.Navigate(Type.GetType($"PenguinTo_Do.Pages.{pageTag}"));
             }
         }
     }

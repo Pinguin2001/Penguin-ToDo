@@ -195,8 +195,11 @@
     <Content Include="Assets\AppTiles\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Images\add.png" />
     <Content Include="Assets\Images\done.png" />
+    <Content Include="Core\app.css" />
     <Content Include="Core\app.js" />
     <Content Include="Core\app.html" />
+    <Content Include="Libs\jquery-3.6.0.min.js" />
+    <Content Include="Core\ui.js" />
     <Content Include="Themes\day.css" />
     <Content Include="Themes\night.css" />
     <Content Include="Properties\Default.rd.xml" />

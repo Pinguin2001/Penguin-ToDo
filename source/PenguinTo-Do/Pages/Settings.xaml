@@ -29,6 +29,9 @@
                                 Empyreal96
                             </Paragraph>
                             <Paragraph>
+                                <Hyperlink NavigateUri="https://jquery.com/">jQuery</Hyperlink>
+                            </Paragraph>
+                            <Paragraph>
                                 <Hyperlink NavigateUri="https://aka.ms/winui">WinUI Libary</Hyperlink>
                             </Paragraph>
                         </RichTextBlock>
@@ -37,9 +40,9 @@
                 <controls:Expander IsExpanded="True" Header="Version Information" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                     <controls:Expander.Content>
                         <Grid>
-                            <Image Grid.Column="0" HorizontalAlignment="Left" Source="../Assets/AppTiles/Square44x44Logo.targetsize-256.png" Height="64" Width="64" />
+                            <Image Grid.Column="0" HorizontalAlignment="Left" Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" Height="64" Width="64" />
                             <RichTextBlock Grid.Column="1" Margin="64,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                <Paragraph>Penguin To-Do v1.0</Paragraph>
+                                <Paragraph>Penguin To-Do v1.1</Paragraph>
                                 <Paragraph>by Pinguin2001</Paragraph>
                                 <Paragraph>
                                     <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
