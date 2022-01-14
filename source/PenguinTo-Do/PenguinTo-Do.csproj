@@ -134,6 +134,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -195,6 +198,7 @@
     <Content Include="Assets\AppTiles\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Images\add.png" />
     <Content Include="Assets\Images\done.png" />
+    <Content Include="Fonts\EULA.txt" />
     <Content Include="UI\app.css" />
     <Content Include="UI\app.js" />
     <Content Include="UI\app.html" />
@@ -210,6 +214,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
@@ -229,6 +237,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\Segoe Fluent Icons.ttf" />
     <None Include="PenguinTo-Do_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

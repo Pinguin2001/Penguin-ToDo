@@ -3,7 +3,6 @@ using Windows.ApplicationModel.Core;
 using Windows.System.Profile;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
 
 namespace PenguinTo_Do
 {
@@ -12,11 +11,6 @@ namespace PenguinTo_Do
         public MainPage()
         {
             this.InitializeComponent();
-            //If acrylic brush is present apply acrylic to background
-            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.AcrylicBrush"))
-            {
-                rootGrid.Background = Windows.UI.Xaml.Application.Current.Resources["AcrylicBackgroundFillColorDefaultBrush"] as AcrylicBrush;
-            }
             //If device is desktop load custom title bar
             if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop")
             {
@@ -45,15 +39,8 @@ namespace PenguinTo_Do
         }
         private void NavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            if (args.IsSettingsInvoked)
-            {
-                contentFrame.Navigate(typeof(Pages.Settings));
-            }
-            else
-            {
-                object pageTag = args.InvokedItemContainer.Tag;
-                contentFrame.Navigate(Type.GetType($"PenguinTo_Do.Pages.{pageTag}"));
-            }
+            object pageTag = args.InvokedItemContainer.Tag;
+            contentFrame.Navigate(Type.GetType($"PenguinTo_Do.Pages.{pageTag}"));
         }
     }
 }

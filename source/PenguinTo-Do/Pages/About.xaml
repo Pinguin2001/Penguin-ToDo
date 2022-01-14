@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="PenguinTo_Do.Pages.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PenguinTo_Do.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    NavigationCacheMode="Required">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel Margin="10,10,10,10">
+                <controls:Expander Header="Credits and Dependencies" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                    <controls:Expander.Content>
+                        <RichTextBlock>
+                            <Paragraph>
+                                Bashar Astifan
+                            </Paragraph>
+                            <Paragraph>
+                                CodingNepal
+                            </Paragraph>
+                            <Paragraph>
+                                Empyreal96
+                            </Paragraph>
+                            <Paragraph>
+                                Segoe Fluent Icons
+                            </Paragraph>
+                            <Paragraph>
+                                <Hyperlink NavigateUri="https://aka.ms/winui">WinUI Libary</Hyperlink>
+                            </Paragraph>
+                        </RichTextBlock>
+                    </controls:Expander.Content>
+                </controls:Expander>
+                <controls:Expander IsExpanded="True" Header="Version Information" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                    <controls:Expander.Content>
+                        <Grid>
+                            <Image Grid.Column="0" HorizontalAlignment="Left" Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" Height="64" Width="64" />
+                            <RichTextBlock Grid.Column="1" Margin="64,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <Paragraph>Penguin To-Do v1.2-prerelease(14012022)</Paragraph>
+                                <Paragraph>by Pinguin2001</Paragraph>
+                                <Paragraph>
+                                    <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
+                                </Paragraph>
+                            </RichTextBlock>
+                        </Grid>
+                    </controls:Expander.Content>
+                </controls:Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

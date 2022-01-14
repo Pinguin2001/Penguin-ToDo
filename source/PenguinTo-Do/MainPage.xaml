@@ -6,12 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
     <Page.Resources>
         <Thickness x:Key="NavigationViewContentMargin">0,5,0,0</Thickness>
     </Page.Resources>
 
     <Grid x:Name="rootGrid">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NavView.PaneDisplayMode"
+                                Value="Top" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -31,9 +46,23 @@
                Margin="44,8,0,0"/>
         </Grid>
 
-        <controls:NavigationView x:Name="NavView" Grid.Row="1" AlwaysShowHeader="False" IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact" ItemInvoked="NavView_ItemInvoked">
+        <controls:NavigationView x:Name="NavView" Grid.Row="1" AlwaysShowHeader="False" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact" ItemInvoked="NavView_ItemInvoked">
             <controls:NavigationView.MenuItems>
-                <controls:NavigationViewItem Content="Home" Tag="Home" Icon="Home" />
+                <controls:NavigationViewItem Content="Home" Tag="Home">
+                    <controls:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="ms-appx:///Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons" Glyph="&#xE80F;" />
+                    </controls:NavigationViewItem.Icon>
+                </controls:NavigationViewItem>
+                <controls:NavigationViewItem Content="Settings" Tag="Settings">
+                    <controls:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="ms-appx:///Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons" Glyph="&#xe713;" />
+                    </controls:NavigationViewItem.Icon>
+                </controls:NavigationViewItem>
+                <controls:NavigationViewItem Content="About" Tag="About">
+                    <controls:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="ms-appx:///Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons" Glyph="&#xe946;" />
+                    </controls:NavigationViewItem.Icon>
+                </controls:NavigationViewItem>
             </controls:NavigationView.MenuItems>
             <Frame x:Name="contentFrame" />
         </controls:NavigationView>
