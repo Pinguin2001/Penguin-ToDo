@@ -39,7 +39,7 @@
                         <Grid>
                             <Image Grid.Column="0" HorizontalAlignment="Left" Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" Height="64" Width="64" />
                             <RichTextBlock Grid.Column="1" Margin="64,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                <Paragraph>Penguin To-Do v1.2-prerelease(14012022)</Paragraph>
+                                <Paragraph>Penguin To-Do v1.2</Paragraph>
                                 <Paragraph>by Pinguin2001</Paragraph>
                                 <Paragraph>
                                     <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
