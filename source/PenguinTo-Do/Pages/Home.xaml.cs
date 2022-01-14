@@ -9,7 +9,7 @@ namespace PenguinTo_Do.Pages
         public Home()
         {
             InitializeComponent();
-            ToDoView.Navigate(new Uri("ms-appx-web:///Core/app.html"));
+            ToDoView.Navigate(new Uri("ms-appx-web:///UI/app.html"));
         }
 
         private void ToDoView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
@@ -30,12 +30,12 @@ namespace PenguinTo_Do.Pages
             // apply Theme
             if (LightMode)
             {
-                string functionString = "var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css';  link.href = 'ms-appx-web:///Themes/day.css'; document.getElementsByTagName('head')[0].appendChild(link); ";
+                string functionString = "var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css';  link.href = 'ms-appx-web:///UI/Themes/day.css'; document.getElementsByTagName('head')[0].appendChild(link); ";
                 await ToDoView.InvokeScriptAsync("eval", new string[] { functionString });
             }
             else
             {
-                string functionString = "var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css';  link.href = 'ms-appx-web:///Themes/night.css'; document.getElementsByTagName('head')[0].appendChild(link); ";
+                string functionString = "var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css';  link.href = 'ms-appx-web:///UI/Themes/night.css'; document.getElementsByTagName('head')[0].appendChild(link); ";
                 await ToDoView.InvokeScriptAsync("eval", new string[] { functionString });
             }
         }
