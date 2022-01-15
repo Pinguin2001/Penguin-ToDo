@@ -64,7 +64,13 @@
                     </controls:NavigationViewItem.Icon>
                 </controls:NavigationViewItem>
             </controls:NavigationView.MenuItems>
-            <Frame x:Name="contentFrame" />
+            <Frame x:Name="contentFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition  />
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
         </controls:NavigationView>
     </Grid>
 </Page>

@@ -3,6 +3,7 @@ using Windows.ApplicationModel.Core;
 using Windows.System.Profile;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace PenguinTo_Do
 {
@@ -19,10 +20,9 @@ namespace PenguinTo_Do
             else
             {
                 AppTitleBar.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                
             }
             //Load Home Page
-            contentFrame.Navigate(typeof(Pages.Home));
+            contentFrame.Navigate(typeof(Pages.Home), null, new DrillInNavigationTransitionInfo());
         }
 
         private void TitleBarLoader()
@@ -40,7 +40,7 @@ namespace PenguinTo_Do
         private void NavView_ItemInvoked(Microsoft.UI.Xaml.Controls.NavigationView sender, Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs args)
         {
             object pageTag = args.InvokedItemContainer.Tag;
-            contentFrame.Navigate(Type.GetType($"PenguinTo_Do.Pages.{pageTag}"));
+            contentFrame.Navigate(Type.GetType($"PenguinTo_Do.Pages.{pageTag}"), null, new DrillInNavigationTransitionInfo());
         }
     }
 }
