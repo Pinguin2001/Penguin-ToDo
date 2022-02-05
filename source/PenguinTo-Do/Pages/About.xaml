@@ -1,54 +1,91 @@
 ﻿<Page
     x:Class="PenguinTo_Do.Pages.About"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PenguinTo_Do.Pages"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    NavigationCacheMode="Required">
+    NavigationCacheMode="Required"
+    mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer>
-            <StackPanel Margin="10,10,10,10">
-                <controls:Expander Header="Credits and Dependencies" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                    <controls:Expander.Content>
-                        <RichTextBlock>
-                            <Paragraph>
-                                Bashar Astifan
-                            </Paragraph>
-                            <Paragraph>
-                                CodingNepal
-                            </Paragraph>
-                            <Paragraph>
-                                Empyreal96
-                            </Paragraph>
-                            <Paragraph>
-                                Segoe Fluent Icons
-                            </Paragraph>
-                            <Paragraph>
-                                <Hyperlink NavigateUri="https://aka.ms/winui">WinUI Libary</Hyperlink>
-                            </Paragraph>
-                        </RichTextBlock>
-                    </controls:Expander.Content>
-                </controls:Expander>
-                <controls:Expander IsExpanded="True" Header="Version Information" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
-                    <controls:Expander.Content>
-                        <Grid>
-                            <Image Grid.Column="0" HorizontalAlignment="Left" Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" Height="64" Width="64" />
-                            <RichTextBlock Grid.Column="1" Margin="64,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                <Paragraph>Penguin To-Do v1.2</Paragraph>
-                                <Paragraph>by Pinguin2001</Paragraph>
-                                <Paragraph>
-                                    <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
-                                </Paragraph>
-                            </RichTextBlock>
-                        </Grid>
-                    </controls:Expander.Content>
-                </controls:Expander>
-            </StackPanel>
-        </ScrollViewer>
+    <Grid>
+        <Pivot>
+            <PivotItem Header="About">
+                <ScrollViewer>
+                    <StackPanel>
+                        <controls:Expander
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Left"
+                            Header="Credits and Dependencies">
+                            <controls:Expander.Content>
+                                <RichTextBlock>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/basharast">Bashar Astifan</Hyperlink>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://github.com/Empyreal96">Empyreal96</Hyperlink>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts">Segoe Fluent Icons</Hyperlink>
+                                    </Paragraph>
+                                    <Paragraph>
+                                        <Hyperlink NavigateUri="https://aka.ms/winui">WinUI Libary</Hyperlink>
+                                    </Paragraph>
+                                </RichTextBlock>
+                            </controls:Expander.Content>
+                        </controls:Expander>
+                        <controls:Expander
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Left"
+                            Header="Version Information"
+                            IsExpanded="True">
+                            <controls:Expander.Content>
+                                <Grid>
+                                    <Image
+                                        Grid.Column="0"
+                                        Width="64"
+                                        Height="64"
+                                        HorizontalAlignment="Left"
+                                        Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" />
+                                    <RichTextBlock
+                                        Grid.Column="1"
+                                        Margin="64,0,0,0"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Center">
+                                        <Paragraph>Penguin To-Do v2.0</Paragraph>
+                                        <Paragraph>by Pinguin2001</Paragraph>
+                                        <Paragraph>
+                                            <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
+                                        </Paragraph>
+                                    </RichTextBlock>
+                                </Grid>
+                            </controls:Expander.Content>
+                        </controls:Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+            <PivotItem Header="Changelog">
+                <ScrollViewer>
+                    <StackPanel>
+                        <controls:Expander
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Left"
+                            Header="v2.0"
+                            IsExpanded="True">
+                            <controls:Expander.Content>
+                                <RichTextBlock>
+                                    <Paragraph>(Apperance) Update Page Transition Animation</Paragraph>
+                                    <Paragraph>(Apperance) Move input box to Bottom</Paragraph>
+                                    <Paragraph>(Bug fix) The &quot;Done&quot; Button no longer overlays text</Paragraph>
+                                    <Paragraph>(General) Clean source</Paragraph>
+                                    <Paragraph>(General) Update Links</Paragraph>
+                                </RichTextBlock>
+                            </controls:Expander.Content>
+                        </controls:Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
     </Grid>
 </Page>

@@ -1,0 +1,39 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI';
+    -ms-content-zooming: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+.main {
+    margin-top: 10px;
+}
+
+.list li {
+    -ms-user-select: text;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    padding-right: 35px;
+    cursor: text;
+}
+
+    .list li .icon {
+        background-color: #10c9cc;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+        padding: 5px 5px;
+        cursor: default;
+    }

@@ -111,6 +111,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -196,15 +197,14 @@
     <Content Include="Assets\AppTiles\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\AppTiles\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\AppTiles\Wide310x150Logo.scale-400.png" />
-    <Content Include="Assets\Images\add.png" />
     <Content Include="Assets\Images\done.png" />
     <Content Include="Fonts\EULA.txt" />
-    <Content Include="UI\app.css" />
-    <Content Include="UI\app.js" />
-    <Content Include="UI\app.html" />
-    <Content Include="UI\Themes\day.css" />
-    <Content Include="UI\Themes\night.css" />
+    <Content Include="ToDoList.UI\ToDoList.UI.css" />
+    <Content Include="ToDoList.JS\ToDoList.js" />
+    <Content Include="ToDoList.UI\Themes\day.css" />
+    <Content Include="ToDoList.UI\Themes\night.css" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="ToDoList.UI\ToDoList.UI.html" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

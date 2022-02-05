@@ -4,10 +4,33 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <WebView x:Name="ToDoView" DefaultBackgroundColor="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,10,10,10" NavigationStarting="ToDoView_NavigationStarting" DOMContentLoaded="ToDoView_DOMContentLoaded" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <WebView
+            x:Name="ToDoList"
+            Margin="10,10,10,0"
+            DOMContentLoaded="ToDoView_DOMContentLoaded"
+            DefaultBackgroundColor="Transparent"
+            NavigationStarting="ToDoView_NavigationStarting" />
+        <Grid Grid.Row="1" Margin="10,0,10,10">
+            <TextBox
+                x:Name="InputBox"
+                KeyDown="InputBox_KeyDown"
+                PlaceholderText="New Task..." />
+            <Button
+                x:Name="addTaskButton"
+                Width="45"
+                Height="30"
+                HorizontalAlignment="Right"
+                Click="AddTask_Click">
+                <FontIcon FontFamily="ms-appx:///Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons" Glyph="&#xE109;" />
+            </Button>
+        </Grid>
     </Grid>
 </Page>

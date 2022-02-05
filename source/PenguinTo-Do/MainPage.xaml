@@ -1,52 +1,51 @@
 ﻿<Page
     x:Class="PenguinTo_Do.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    controls:BackdropMaterial.ApplyToRootOrPageBackground="True"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    controls:BackdropMaterial.ApplyToRootOrPageBackground="True">
+    mc:Ignorable="d">
     <Page.Resources>
         <Thickness x:Key="NavigationViewContentMargin">0,5,0,0</Thickness>
     </Page.Resources>
 
-    <Grid x:Name="rootGrid">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="720" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="NavView.PaneDisplayMode"
-                                Value="Top" />
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid x:Name="AppTitleBar">
+        <Grid x:Name="AppTitleBar" x:Load="False">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
-                <ColumnDefinition/>
-                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0" />
+                <ColumnDefinition />
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0" />
             </Grid.ColumnDefinitions>
-            <Image Source="ms-appx:///Assets/AppTiles/Square44x44Logo.png" 
-           Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"
-           Width="20" Height="20" Margin="12,7,0,0"/>
-            <TextBlock Text="Penguin To-Do" 
-               Grid.Column="1" 
-               Style="{StaticResource CaptionTextBlockStyle}" 
-               Margin="44,8,0,0"/>
+            <Image
+                Grid.Column="1"
+                Width="20"
+                Height="20"
+                Margin="12,7,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Source="ms-appx:///Assets/AppTiles/Square44x44Logo.png" />
+            <TextBlock
+                Grid.Column="1"
+                Margin="44,8,0,0"
+                Style="{StaticResource CaptionTextBlockStyle}"
+                Text="Penguin To-Do" />
         </Grid>
 
-        <controls:NavigationView x:Name="NavView" Grid.Row="1" AlwaysShowHeader="False" IsSettingsVisible="False" IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact" ItemInvoked="NavView_ItemInvoked">
+        <controls:NavigationView
+            x:Name="NavView"
+            Grid.Row="1"
+            AlwaysShowHeader="False"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            ItemInvoked="NavView_ItemInvoked"
+            PaneDisplayMode="LeftCompact">
             <controls:NavigationView.MenuItems>
                 <controls:NavigationViewItem Content="Home" Tag="Home">
                     <controls:NavigationViewItem.Icon>
@@ -67,10 +66,22 @@
             <Frame x:Name="contentFrame">
                 <Frame.ContentTransitions>
                     <TransitionCollection>
-                        <NavigationThemeTransition  />
+                        <NavigationThemeTransition />
                     </TransitionCollection>
                 </Frame.ContentTransitions>
             </Frame>
         </controls:NavigationView>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="NavView.PaneDisplayMode" Value="Top" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

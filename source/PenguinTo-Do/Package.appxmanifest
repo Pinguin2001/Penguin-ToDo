@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap mp rescap">
-  <Identity Name="Pinguin2001.ToDo.App" Publisher="CN=Pinguin2001" Version="1.2.0.0" />
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" IgnorableNamespaces="uap uap5 mp">
+  <Identity Name="Pinguin2001.ToDo.App" Publisher="CN=Pinguin2001" Version="2.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="1b0152e3-29fe-417e-a08c-d713339d24fe" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Penguin To-Do</DisplayName>
@@ -25,6 +25,6 @@
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\AppTiles\SplashScreen.png" />
       </uap:VisualElements>
-    </Application>
+	</Application>
   </Applications>
 </Package>
