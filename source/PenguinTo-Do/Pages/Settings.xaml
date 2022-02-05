@@ -9,7 +9,7 @@
     NavigationCacheMode="Required"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel Margin="10,10,10,10">
                 <controls:Expander
