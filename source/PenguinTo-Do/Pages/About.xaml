@@ -58,6 +58,9 @@
                                         <Paragraph>
                                             <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
                                         </Paragraph>
+                                        <Paragraph>
+                                            Licensed under the <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo/blob/main/LICENSE">MIT License</Hyperlink>
+                                        <Paragraph>
                                     </RichTextBlock>
                                 </Grid>
                             </controls:Expander.Content>
