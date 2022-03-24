@@ -3,7 +3,7 @@
   <h1>Penguin To-Do</h1>
 </div>
 
-A simple and fast To-Do app powered by the Universal Windows Platform and web technologies.
+A simple and fast To-Do app for Windows 10, Windows 10 Mobile and Windows 11
 
 # Highlights
 - Light and Dark Mode
