@@ -16,13 +16,12 @@
             x:Name="ToDoList"
             Margin="10,10,10,0"
             DOMContentLoaded="ToDoView_DOMContentLoaded"
-            DefaultBackgroundColor="Transparent"
-            NavigationStarting="ToDoView_NavigationStarting" />
+            DefaultBackgroundColor="Transparent" />
         <Grid Grid.Row="1" Margin="10,0,10,10">
             <TextBox
                 x:Name="InputBox"
                 KeyDown="InputBox_KeyDown"
-                PlaceholderText="New Task..." />
+                PlaceholderText="Add a new Task..." />
             <Button
                 x:Name="addTaskButton"
                 Width="45"

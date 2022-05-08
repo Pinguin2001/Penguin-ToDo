@@ -17,7 +17,33 @@
                         <controls:Expander
                             HorizontalAlignment="Stretch"
                             HorizontalContentAlignment="Left"
-                            Header="Credits and Dependencies">
+                            Header="Version Information"
+                            IsExpanded="True">
+                            <controls:Expander.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image
+                                    Width="64"
+                                    Height="64"
+                                    Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" />
+                                    <RichTextBlock VerticalAlignment="Center">
+                                        <Paragraph>PenguinTo-Do v2.1</Paragraph>
+                                        <Paragraph>by Pinguin2001</Paragraph>
+                                        <Paragraph>
+                                            <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
+                                        </Paragraph>
+                                        <Paragraph>
+                                            Licensed under the
+                                            <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo/blob/main/LICENSE">MIT License</Hyperlink>
+                                        </Paragraph>
+                                    </RichTextBlock>
+                                </StackPanel>
+                            </controls:Expander.Content>
+                        </controls:Expander>
+                        <controls:Expander
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Left"
+                            Header="Thanks to"
+                            IsExpanded="True">
                             <controls:Expander.Content>
                                 <RichTextBlock>
                                     <Paragraph>
@@ -26,6 +52,16 @@
                                     <Paragraph>
                                         <Hyperlink NavigateUri="https://github.com/Empyreal96">Empyreal96</Hyperlink>
                                     </Paragraph>
+                                </RichTextBlock>
+                            </controls:Expander.Content>
+                        </controls:Expander>
+                        <controls:Expander
+                            HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Left"
+                            Header="Dependencies"
+                            IsExpanded="True">
+                            <controls:Expander.Content>
+                                <RichTextBlock>
                                     <Paragraph>
                                         <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/windows/apps/design/downloads/#fonts">Segoe Fluent Icons</Hyperlink>
                                     </Paragraph>
@@ -33,36 +69,6 @@
                                         <Hyperlink NavigateUri="https://aka.ms/winui">WinUI Libary</Hyperlink>
                                     </Paragraph>
                                 </RichTextBlock>
-                            </controls:Expander.Content>
-                        </controls:Expander>
-                        <controls:Expander
-                            HorizontalAlignment="Stretch"
-                            HorizontalContentAlignment="Left"
-                            Header="Version Information"
-                            IsExpanded="True">
-                            <controls:Expander.Content>
-                                <Grid>
-                                    <Image
-                                        Grid.Column="0"
-                                        Width="64"
-                                        Height="64"
-                                        HorizontalAlignment="Left"
-                                        Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" />
-                                    <RichTextBlock
-                                        Grid.Column="1"
-                                        Margin="64,0,0,0"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Center">
-                                        <Paragraph>Penguin To-Do v2.0</Paragraph>
-                                        <Paragraph>by Pinguin2001</Paragraph>
-                                        <Paragraph>
-                                            <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
-                                        </Paragraph>
-                                        <Paragraph>
-                                            Licensed under the <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo/blob/main/LICENSE">MIT License</Hyperlink>
-                                        <Paragraph>
-                                    </RichTextBlock>
-                                </Grid>
                             </controls:Expander.Content>
                         </controls:Expander>
                     </StackPanel>

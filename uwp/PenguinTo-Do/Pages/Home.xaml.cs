@@ -8,28 +8,20 @@ namespace PenguinTo_Do.Pages
 {
     public sealed partial class Home : Page
     {
+        private bool LightMode = Application.Current.RequestedTheme == ApplicationTheme.Light;
         public Home()
         {
             InitializeComponent();
             ToDoList.Navigate(new Uri("ms-appx-web:///ToDoList.UI/ToDoList.UI.html"));
         }
 
-        private void ToDoView_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
-        {
-            ToDoList.Visibility = Visibility.Collapsed;
-        }
-
         private void ToDoView_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
         {
             ThemeLoader();
-            ToDoList.Visibility = Visibility.Visible;
-            InputBox.Text = "";
         }
 
         private async void ThemeLoader()
         {
-            // get System Theme Mode
-            bool LightMode = Application.Current.RequestedTheme == ApplicationTheme.Light;
             // apply Theme
             if (LightMode)
             {
@@ -58,7 +50,9 @@ namespace PenguinTo_Do.Pages
 
         private void AddTask()
         {
-            ToDoList.Navigate(new Uri("ms-appx-web:///ToDoList.UI/ToDoList.UI.html?inputBoxValue=" + InputBox.Text));
+            string inputboxtext = InputBox.Text;
+            ToDoList.Navigate(new Uri("ms-appx-web:///ToDoList.UI/ToDoList.UI.html?inputBoxValue=" + inputboxtext));
+            InputBox.Text = "";
         }
     }
 }

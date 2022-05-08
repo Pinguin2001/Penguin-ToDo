@@ -1,7 +1,7 @@
-﻿/source/PenguinTo-Do/AppPackages
-/source/PenguinTo-Do/BundleArtifacts
-/source/PenguinTo-Do/bin
-/source/PenguinTo-Do/obj
-/source/PenguinTo-Do/PenguinTo-Do_TemporaryKey.pfx
-/source/PenguinTo-Do/PenguinTo-Do.csproj.user
-/source/.vs
+﻿/uwp/PenguinTo-Do/AppPackages
+/uwp/PenguinTo-Do/BundleArtifacts
+/uwp/PenguinTo-Do/bin
+/uwp/PenguinTo-Do/obj
+/uwp/PenguinTo-Do/PenguinTo-Do_TemporaryKey.pfx
+/uwp/PenguinTo-Do/PenguinTo-Do.csproj.user
+/uwp/.vs
