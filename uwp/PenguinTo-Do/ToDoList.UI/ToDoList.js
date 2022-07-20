@@ -1,7 +1,7 @@
 // get required elements
 const list = document.querySelector(".list");
 
-// get Todays Date and write to HTML
+// get Todays date and write to HTML
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, "0");
 var mm = String(today.getMonth() + 1 ).padStart(2, "0"); // need to add +1 becouse January is 0
