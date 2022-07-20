@@ -22,9 +22,9 @@
                             <controls:Expander.Content>
                                 <StackPanel Orientation="Horizontal">
                                     <Image
-                                    Width="64"
-                                    Height="64"
-                                    Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" />
+                                        Width="64"
+                                        Height="64"
+                                        Source="ms-appx:///Assets/AppTiles/Square44x44Logo.targetsize-256.png" />
                                     <RichTextBlock VerticalAlignment="Center">
                                         <Paragraph>PenguinTo-Do v2.1</Paragraph>
                                         <Paragraph>by Pinguin2001</Paragraph>
@@ -32,8 +32,7 @@
                                             <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo">Source Code</Hyperlink>
                                         </Paragraph>
                                         <Paragraph>
-                                            Licensed under the
-                                            <Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo/blob/main/LICENSE">MIT License</Hyperlink>
+                                            Licensed under the<Hyperlink NavigateUri="https://github.com/Pinguin2001/Penguin-ToDo/blob/main/LICENSE">MIT License</Hyperlink>
                                         </Paragraph>
                                     </RichTextBlock>
                                 </StackPanel>
@@ -84,11 +83,11 @@
                             IsExpanded="True">
                             <controls:Expander.Content>
                                 <RichTextBlock>
-                                    <Paragraph>(Apperance) Update Page Transition Animation</Paragraph>
-                                    <Paragraph>(Apperance) Move input box to Bottom</Paragraph>
-                                    <Paragraph>(Bug fix) The &quot;Done&quot; Button no longer overlays text</Paragraph>
-                                    <Paragraph>(General) Clean source</Paragraph>
-                                    <Paragraph>(General) Update Links</Paragraph>
+                                    <Paragraph>- (Apperance) Update Page Transition Animation</Paragraph>
+                                    <Paragraph>- (Apperance) Move input box to Bottom</Paragraph>
+                                    <Paragraph>- (Bug fix) The &quot;Done&quot; Button no longer overlays text</Paragraph>
+                                    <Paragraph>- (General) Clean source</Paragraph>
+                                    <Paragraph>- (General) Update Links</Paragraph>
                                 </RichTextBlock>
                             </controls:Expander.Content>
                         </controls:Expander>
