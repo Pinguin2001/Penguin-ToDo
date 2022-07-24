@@ -29,8 +29,6 @@ namespace PenguinTo_Do
             // Set colors
             titleBar.BackgroundColor = Colors.Transparent;
             titleBar.ButtonBackgroundColor = Colors.Transparent;
-            titleBar.ButtonHoverBackgroundColor = Colors.Transparent;
-            titleBar.ButtonPressedBackgroundColor = Colors.Transparent;
             titleBar.InactiveBackgroundColor = Colors.Transparent;
             titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
