@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/todoIcon.png" height="75" widht="75" />
+  <img src="images/todoIcon.png" height="75" width="75" />
   <h1>Penguin To-Do</h1>
 </div>
 
