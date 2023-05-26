@@ -16,6 +16,8 @@ namespace PenguinTo_Do
             if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop" || AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Core") { TitleBarLoader(); }
             // Load Home
             contentFrame.Navigate(typeof(Pages.Home));
+            // Select home item in navview
+            NavView.SelectedItem = NavView.MenuItems[0];
         }
 
         private void TitleBarLoader()

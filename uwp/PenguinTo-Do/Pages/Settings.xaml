@@ -5,23 +5,19 @@
     xmlns:controls="using:Microsoft.UI.Xaml.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     NavigationCacheMode="Required"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer>
-            <StackPanel Margin="10,10,10,10">
-                <controls:Expander
-                    HorizontalAlignment="Stretch"
-                    HorizontalContentAlignment="Left"
-                    Header="App Data"
-                    IsExpanded="True">
-                    <controls:Expander.Content>
-                        <Button Click="ResetToDoList_Click" Content="Reset To-Do List" />
-                    </controls:Expander.Content>
-                </controls:Expander>
-            </StackPanel>
-        </ScrollViewer>
+    <Grid>
+        <controls:Expander
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Left"
+            Header="App Data"
+            IsExpanded="True">
+            <controls:Expander.Content>
+                <Button Click="ResetToDoList_Click" Content="Reset To-Do List" />
+            </controls:Expander.Content>
+        </controls:Expander>
     </Grid>
 </Page>

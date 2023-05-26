@@ -57,7 +57,7 @@
                     </controls:NavigationViewItem.Icon>
                 </controls:NavigationViewItem>
             </controls:NavigationView.MenuItems>
-            <Frame x:Name="contentFrame" />
+            <Frame x:Name="contentFrame" Margin="5,5,5,5" />
         </controls:NavigationView>
     </Grid>
 </Page>
